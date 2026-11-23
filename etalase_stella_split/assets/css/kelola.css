@@ -1,0 +1,56 @@
+/* Halaman Kelola Siswa & Kelola User: grid, kartu, tabel, badge role. */
+
+.grid-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid-split { grid-template-columns: calc((100% + 1.5rem) / 3 - 1.5rem) minmax(0, 1fr); }
+}
+
+.badge-role {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-super_admin { background: #dc3545; color: #fff;}
+
+.badge-admin { background: #ffc107; color: #000;}
+
+.badge-siswa { background: #17a2b8; color: #fff;}
+
+.card-custom { border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, .06);}
+
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch;}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    vertical-align: middle;
+    border-collapse: collapse;
+    color: #212529;
+}
+
+.table.flush { margin-bottom: 0;}
+
+.table th, .table td {
+    padding: .5rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th { background-color: #212529; color: #fff; font-weight: 700; vertical-align: bottom;}
+
+.table tbody { border-top: 2px solid currentColor;}
+
+.table tbody tr:hover > * { background-color: rgba(0, 0, 0, .075);}
+
+.table-empty { text-align: center !important; color: #6c757d; padding: 1.5rem .5rem !important;}
+
+.actions { display: flex; flex-wrap: wrap; gap: .25rem;}
